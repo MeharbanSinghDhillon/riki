@@ -1,7 +1,8 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     /* its main div which contains all divs*/
     width: 100vw;
