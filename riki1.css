@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    /* its main div which contains all divs*/
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5vw 15vw 5vw 15vw;
+    gap: 1px;
+    grid-template-rows: 45vh 10vh 20vh 25vh;
+    border: 2px solid black;
+}
+
+.inner {
+    border: 1px solid white;
+    background-color: goldenrod;
+    /*this is for content inside div start*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*this is for content inside div end*/
+}
+
+.inner:nth-child(2) {
+
+    grid-column: span 1;
+    grid-row: span 2;
+    background-color: cadetblue;
+
+}
+
+.inner:nth-child(3) {
+    grid-row: span 1;
+    grid-column: span 2;
+    background-color: indianred;
+
+}
+
+.inner:nth-child(4) {
+    grid-column: span 3;
+    background-color: goldenrod;
+}
+
+.inner:nth-child(5) {
+    grid-row: span 3;
+    background-color: indianred;
+
+}
+
+.inner:nth-child(6) {
+    grid-row: span 3;
+    background-color: goldenrod;
+}
+
+.inner:nth-child(7) {
+    grid-row: span 2;
+    grid-column: span 2;
+    background-color: cadetblue;
+}
+
+.inner:nth-child(8) {
+    grid-row: span 2;
+    grid-column: span 2;
+    background-color: indianred;
+}
+
+.inner:nth-child(9) {
+    grid-row: span 2;
+    background-color: indianred;
+}
+
+.inner:nth-child(10) {
+    grid-row: span 2;
+    grid-column: span 2;
+    background-color: indianred;
+}
+
+.inner:nth-child(11) {
+    grid-row: span 2;
+    grid-column: span 2;
+    background-color: goldenrod;
+}
+
+@media (max-width:999px) {
+
+    /* media query for tablet  */
+    .container {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .inner {
+        flex-basis: 400px;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    /* media query for mobile */
+    .container {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .inner {
+        flex-basis: 300px;
+    }
+
+}
